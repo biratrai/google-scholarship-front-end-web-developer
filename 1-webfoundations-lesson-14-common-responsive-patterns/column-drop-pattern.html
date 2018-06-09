@@ -1,0 +1,90 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Column Drop</title>
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" type="text/css" href="main.css">
+  </head>
+  <style>
+	/*body {
+	    background-color: yellow;
+	}*/
+	.dark_blue {
+		background-color: darkblue;
+	}
+	.light_blue {
+		background-color: lightblue;
+	}
+	.green {
+		background-color: green;
+	}
+
+	.header {
+		background-color: lightgreen;
+	}
+
+	.responsive-container {
+		/*windows: 100%;*/
+		display: flex;
+		width: 100%;
+		flex-wrap: wrap;
+	}
+
+	.box {
+		width: 100%;
+		height: 100px;
+		text-align: center;
+	}
+	/*@media screen and (min-width: 500px) {
+	    body {
+	        background-color: lightblue;
+	    }
+	}*/
+
+	/*@media screen and (min-width: 200px) and (max-width: 500px) {
+	    p {
+	        background-color: red;
+	    }
+	}*/
+	@media screen and (min-width: 300px){
+		.header { width: 100%; order: 4; }
+		.dark_blue { width: 50%; order:3; }
+		.light_blue { width: 100%; order: 1 }
+		.green { width: 50%; order: 2; }
+	}
+
+	@media screen and (min-width: 500px){
+		.header { width: 50%; order: 2; }
+		.dark_blue { width: 50%; order:3; }
+		.light_blue { width: 50%; order: 1 }
+		.green { width: 50%; order: 4; }
+	}
+	
+	@media screen and (min-width: 700px){
+		.header { width: 50%; order: 2; }
+		.dark_blue { width: 25%; order:3; }
+		.light_blue { width: 25%; order: 1 }
+		.green { width: 100%; order: 4; }
+	}
+	
+
+</style>
+  <body>
+  	<div class="container">
+  		<h1>Common Responsive Web Design Patterns</h1>
+  		<p>This is the one of the common responsive patterns. It's called Column Drop.</p>
+  		<br>
+  		<p>In this pattern the column drop simply stacks the columns vertically as the window width becomes too narrow for the content.</p>
+  		<div class="responsive-container">
+	  		<div class="box header">Light Green</div>
+	  		<div class="box dark_blue">Dark blue</div>
+	  		<div class="box light_blue">Light blue</div>
+	  		<div class="box green">Green</div>	
+  		</div>
+  		
+  	</div>
+  </body>
+ </html>
