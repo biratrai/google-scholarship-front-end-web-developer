@@ -9,9 +9,7 @@
     <link rel="stylesheet" type="text/css" href="main.css">
   </head>
   <style>
-	/*body {
-	    background-color: yellow;
-	}*/
+	
 	.dark_blue {
 		background-color: darkblue;
 	}
@@ -27,7 +25,7 @@
 	}
 
 	.responsive-container {
-		/*windows: 100%;*/
+		windows: 100%;
 		display: flex;
 		width: 100%;
 		flex-wrap: wrap;
@@ -38,22 +36,12 @@
 		height: 100px;
 		text-align: center;
 	}
-	/*@media screen and (min-width: 500px) {
-	    body {
-	        background-color: lightblue;
-	    }
-	}*/
 
-	/*@media screen and (min-width: 200px) and (max-width: 500px) {
-	    p {
-	        background-color: red;
-	    }
-	}*/
 	@media screen and (min-width: 300px){
-		.header { width: 100%; order: 4; }
-		.dark_blue { width: 50%; order:3; }
-		.light_blue { width: 100%; order: 1 }
-		.green { width: 50%; order: 2; }
+		.header { width: 100%;}
+		.dark_blue { width: 100%;}
+		.light_blue { width: 100%;}
+		.green { width: 100%; }
 	}
 
 	@media screen and (min-width: 500px){
@@ -64,10 +52,10 @@
 	}
 	
 	@media screen and (min-width: 700px){
-		.header { width: 50%; order: 2; }
+		.header { width: 25%; order: 2; }
 		.dark_blue { width: 25%; order:3; }
 		.light_blue { width: 25%; order: 1 }
-		.green { width: 100%; order: 4; }
+		.green { width: 25%; order: 4; }
 	}
 	
 
@@ -76,7 +64,7 @@
   	<div class="container">
   		<h1>Common Responsive Web Design Patterns</h1>
   		<p>This is the one of the common responsive patterns. It's called Column Drop.</p>
-  		<br>
+
   		<p>In this pattern the column drop simply stacks the columns vertically as the window width becomes too narrow for the content.</p>
   		<div class="responsive-container">
 	  		<div class="box header">Light Green</div>
