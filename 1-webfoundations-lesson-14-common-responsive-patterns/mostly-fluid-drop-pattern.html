@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Column Drop</title>
+    <title>Mostly Fluid</title>
     <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500" rel="stylesheet" type="text/css">
     <link rel="stylesheet" type="text/css" href="main.css">
   </head>
@@ -20,8 +20,12 @@
 		background-color: green;
 	}
 
-	.header {
+	.light_green {
 		background-color: lightgreen;
+	}
+
+	.orange {
+		background-color: orange;
 	}
 
 	.responsive-container {
@@ -37,41 +41,44 @@
 		text-align: center;
 	}
 
-	@media screen and (min-width: 300px){
-		.header { width: 100%;}
-		.dark_blue { width: 100%;}
-		.light_blue { width: 100%;}
-		.green { width: 100%; }
+	@media screen and (min-width: 450px){
+		.dark_blue, .light_blue { 
+			width: 50%;
+		}
 	}
 
-	@media screen and (min-width: 500px){
-		.header { width: 50%; order: 2; }
-		.dark_blue { width: 50%; order:3; }
-		.light_blue { width: 50%; order: 1 }
-		.green { width: 50%; order: 4; }
+	@media screen and (min-width: 550px){
+		.dark_blue, .light_blue { 
+			width: 50%;
+		}
+		.light_green, .green, .orange { 
+			width: 33.33%;  
+		}
 	}
 	
-	@media screen and (min-width: 700px){
+	/*@media screen and (min-width: 700px){
 		.header { width: 25%; order: 2; }
 		.dark_blue { width: 25%; order:3; }
 		.light_blue { width: 25%; order: 1 }
 		.green { width: 25%; order: 4; }
-	}
+	}*/
 	
 
 </style>
   <body>
   	<div class="container">
   		<h1>Common Responsive Web Design Patterns</h1>
-  		<p>This is the one of the common responsive patterns. It's called Column Drop.</p>
+  		<p>This is the one of the common responsive patterns. It's called Mostly Fluid.</p>
 
-  		<p>In this pattern the column drop simply stacks the columns vertically as the window width becomes too narrow for the content.</p>
-  		<p><a href="https://developers.google.com/web/fundamentals/design-and-ux/responsive/patterns#column_drop">Column Drop Responsive Pattern</p>
+  		<p>In this pattern it consists primarly of a fluid grid. It usually remains the same size, simply adjusting the margins on wider screens.</p>
+  		<p>On smaller screens, the main content reflows, while other columns are stacked vertically.</p>
+  		<p><a href="https://developers.google.com/web/fundamentals/design-and-ux/responsive/patterns#mostly_fluid">Mostly Fluid Responsive Pattern</p>
   		<div class="responsive-container">
-	  		<div class="box header">Light Green</div>
 	  		<div class="box dark_blue">Dark blue</div>
 	  		<div class="box light_blue">Light blue</div>
-	  		<div class="box green">Green</div>	
+	  		<div class="box light_green">Light Green</div>
+	  		<div class="box green">Green</div>
+	  		<div class="box orange">Orange</div>	
   		</div>
   		
   	</div>
