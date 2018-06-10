@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Layout Shifter</title>
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" type="text/css" href="main.css">
+  </head>
+  <style>
+	
+	.dark_blue {
+		background-color: darkblue;
+	}
+	.light_blue {
+		background-color: lightblue;
+	}
+	.green {
+		background-color: green;
+	}
+
+	.light_green {
+		background-color: lightgreen;
+	}
+
+	.orange {
+		background-color: orange;
+	}
+
+	.responsive-container {
+		windows: 100%;
+		display: flex;
+		width: 100%;
+		flex-wrap: wrap;
+	}
+
+	.box {
+		width: 100%;
+		text-align: center;
+		min-height: 150px;
+	}
+
+	@media screen and (min-width: 550px){
+		.dark_blue { 
+			width: 50%;
+		}
+		#container2 { 
+			width: 50%;  
+		}
+	}
+	
+	@media screen and (min-width: 700px){
+		.container {
+			margin-left: auto;
+			margin-right: auto;
+			width: 700px;
+		}
+	}
+	
+
+</style>
+  <body>
+  	<div class="container">
+  		<h1>Common Responsive Web Design Patterns</h1>
+  		<p>This is the one of the common responsive patterns. It's called <b>Layout Shifter.</b></p>
+
+  		<p>This is the most responsive pattern, with multiple breakpoints across several screen widths.</p>
+  		<p>It is more complex to maintain and likely involves changes within elements, not just overall content layout.</p>
+  		<p><a href="https://developers.google.com/web/fundamentals/design-and-ux/responsive/patterns#layout_shifter">Layout Shifter Responsive Pattern</p>
+  		<div class="responsive-container">
+	  		<div class="box dark_blue">Dark blue</div>
+	  		<div class="responsive-container" id="container2">
+		  		<div class="box light_blue">Light blue</div>
+		  		<div class="box light_green">Light Green</div>	
+	  		</div>
+	  		<div class="box green">Green</div>
+	  		<div class="box orange">Orange</div>	
+  		</div>
+  		
+  	</div>
+  </body>
+ </html>
