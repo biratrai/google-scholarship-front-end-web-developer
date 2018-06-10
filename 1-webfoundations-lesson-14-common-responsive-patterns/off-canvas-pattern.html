@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Off Canvas</title>
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" type="text/css" href="main.css">
+  </head>
+  <style>
+	
+	.dark_blue {
+		background-color: darkblue;
+		position: absolute;
+		transform: translate(-700px, 0);
+		transition: transform 0.3s ease;
+	}
+
+	.light_blue {
+		background-color: lightblue;
+	}
+	.green {
+		background-color: green;
+	}
+
+	.light_green {
+		background-color: lightgreen;
+	}
+
+	.orange {
+		background-color: orange;
+	}
+
+	.responsive-container {
+		windows: 100%;
+		display: flex;
+		width: 100%;
+		flex-wrap: wrap;
+	}
+
+	.box {
+		width: 100%;
+		text-align: center;
+		min-height: 150px;
+	}
+	
+	@media screen and (min-width: 600px){
+		.dark_blue {
+			width: 25%;
+			transform: translate(0,0);
+			order: 1;
+		}
+
+	}
+
+</style>
+  <body>
+  	<div class="container">
+  		<h1>Common Responsive Web Design Patterns</h1>
+  		<p>This is the one of the common responsive patterns. It's called <b>Off Canvas.</b></p>
+
+  		<p>Rather than stacking content vertically, this pattern put's less frequently used content off the screen.</p>
+  		<p>The off-screen content is only displayed when the screen size is large enough and on smaller screens, content is only a click away.</p>
+  		<p><a href="https://developers.google.com/web/fundamentals/design-and-ux/responsive/patterns#layout_shifter">Layout Shifter Responsive Pattern</p>
+  		<div class="responsive-container">
+	  		<div class="box dark_blue">Dark blue</div>
+	  		<div class="responsive-container" id="container2">
+		  		<div class="box light_blue">Light blue</div>
+		  		<div class="box light_green">Light Green</div>	
+	  		</div>
+	  		<div class="box green">Green</div>
+	  		<div class="box orange">Orange</div>	
+  		</div>
+  		
+  	</div>
+  </body>
+ </html>
